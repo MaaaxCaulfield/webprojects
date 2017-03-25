@@ -1,0 +1,29 @@
+body, html{
+    height: 100%;
+    margin:0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    border: 5px black solid;
+}
+#container:hover{
+    transform: rotate(600000deg);
+    transition: transform 190s ease;  
+}
+.black{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+}
+.white{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
