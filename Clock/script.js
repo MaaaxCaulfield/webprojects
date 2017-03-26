@@ -14,6 +14,8 @@ function drawLines(angles, length, color, width){
     line.moveTo(R,R);
     line.lineTo(X,Y);
     context.stroke(line);
+    context.lineWidth = 1;
+    context.fillStyle = "black";
 }
 
 function draw(){
