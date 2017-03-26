@@ -3,11 +3,13 @@ var canvas = document.getElementById("canvas"),
 var R = canvas.width / 2, d, angle, pX, pY, qX, qY
 var d, angle ,pX ,pY ,qX ,qY ;
 
-function drawLines(angles, length){
+function drawLines(angles, length, color, width){
     var X = (Math.cos(Math.PI / 2 - angles) * R)* length;
     var Y = (-Math.sin(Math.PI / 2 - angles) * R) * length;
     X += R;
     Y += R;
+    context.fillStyle = color;
+    context.lineWidth = width;
     var line = new Path2D();
     line.moveTo(R,R);
     line.lineTo(X,Y);
@@ -47,9 +49,9 @@ function time() {
     
     draw();
     
-    drawLines(secondsAngle,1);
-    drawLines(minutesAngle,0.8);
-    drawLines(hoursAngle,0.6);
+    drawLines(secondsAngle,1, "red", 1);
+    drawLines(minutesAngle,0.8, "grey", 2);
+    drawLines(hoursAngle,0.6, "black", 5);
 }
 
 function drawClock() {
