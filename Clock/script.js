@@ -14,11 +14,11 @@ function drawLines(angles, length, color, width){
     line.moveTo(R,R);
     line.lineTo(X,Y);
     context.stroke(line);
-    context.lineWidth = 1;
-    context.fillStyle = "black";
 }
 
 function draw(){
+    context.lineWidth = 1;
+    context.fillStyle = "black";
 for(d = 0; d < 60; ++d) {
     angle = (d / 60) * (2 * Math.PI);
     pX = Math.cos(angle) * R;
